@@ -1,0 +1,1 @@
+document.write("Ejemplo 1: Hola Mundo");
