@@ -74,3 +74,8 @@ let nombreEstudiante = "Juan";
 let nuevoMensajeBienvenida = mensajeBienvenida.replace("estudiante", nombreEstudiante);
 let ejemplo10 = document.getElementById("ejemplo10");
 ejemplo10.innerText = "Antes de reemplazar " + mensajeBienvenida + " despues de reemplazar " + nuevoMensajeBienvenida;
+
+
+
+
+

@@ -139,4 +139,25 @@ let areaCirculo = Pi * radioCirculoAlCuadrado;
 document.write("El área de un circulo con radio 4 es de " + areaCirculo);
 document.write("</br>");
 
+// 7. Determina el área de un rombo con diagonales de longitudes 12 cm y 16 cm.
+let diagonal1 = 12;
+let diagonal2 = 16;
+let areaRombo = (diagonal1 * diagonal2)/2;
+document.write("El área del rombo es " + " " + areaRombo + "<br>");
 
+//8. Calcula el área de un paralelogramo con base de 7 metros y altura de 9 metros:</br>");
+
+let baseParalelogramo = 7;
+let alturaParalelogramo = 9;
+multiplicacionArea = baseParalelogramo * alturaParalelogramo;
+
+document.write('Para calcular el área de un paralelogramo en la base por la altura: ' + multiplicacionArea + ' centímetros' + '<br>');
+
+//9. Calcular el area de un pentagono de lado 6cm.
+let apotemapentagono = 4.13;
+let ladopentagono = 6;
+let perimetroPentagono = (5 * ladopentagono);
+
+let areapentagono = (perimetroPentagono * apotemapentagono)/2
+
+document.write("Área del pentágono es cinco veces la longitud de su lado multiplicado por su apotema dividido entre dos. Su lado es " + ladopentagono + " cm y la apotema es " + apotemapentagono + " cm. Por lo que el área es " + areapentagono + " cm" + "</br>");
