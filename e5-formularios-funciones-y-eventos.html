@@ -62,6 +62,35 @@
       <button type="button" class="btn btn-warning">Warning</button>
       <button type="button" class="btn btn-danger">Danger</button>
       <button type="button" class="btn btn-link">Link</button>
+      
+      <h3>EJEMPLO 9 : Validaciones de tipo input texto y estilos</h3>
+      <p>Primero hay que crear un div con la clase was-validated y poner dentro del div los elementos del formulario a validar </p>
+      <p>Por cada elemento a validar, hacer un div con la clase mb-3 y dentro poner el elemento a validar y texto con la class valid-feedback valido y otro texto con la clasee invalid-feedback y tel testo de invalido</p>
+      <div id="ejemplo9formularios" class="was-validated">
+      <div class="mb-3">
+      <input type="text" id="e10texto" placeholder="Introduce tu texto" required minlength="5" maxlength="10" class="form-control"> 
+      <p class="valid-feedback">El texto introducido es correcto</p>
+      <p class="invalid-feedback">El campo texto es obligatorio y debe tener entre 5 y 10 caracteres</p>
+      </div>
+
+      <div class="mb-3">
+      <input type="number" id="e10number" placeholder="Introduce tu numero" required min="0" max="10" class="form-control"> 
+      <p class="valid-feedback">El numero introducido es correcto</p>
+      <p class="invalid-feedback">El campo número es obligatorio y debe ser un numero entre 0 y 10</p>
+      </div>
+    
+      <div class="mb-3">
+      <input type="email" id="e10email" placeholder="Introduce tu email" required minlength="5" maxlength="20" class="form-control"> 
+      <p class="valid-feedback">El email introducido es correcto</p>
+      <p class="invalid-feedback">El campo email es obligatorio y debe tener entre 5 y 20 caracteres</p>
+      </div>
+
+
+       </div>
+      
+      <button type="button" class="btn btn-success">Guardar Texto</button>
+      </div>
+
     </div>
 
     <div class="container mt-5">
