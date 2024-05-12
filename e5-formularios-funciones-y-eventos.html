@@ -12,94 +12,129 @@
 <body>
 
     <div class="p-5 bg-dark text-white text-center">
-        <h1>Bootcamp QA: Formularios, Funciones y Eventos
-        </h1>
+        <h1>Bootcamp QA: Formularios, Funciones y Eventos</h1>
         <p><a href="https://www.w3schools.com/html/html_form_input_types.asp">Formularios Input</a></p>
         <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_select.php">Formularios Select</a></p>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_select.php">Formularios Select</a></p>
         <p><a href="https://www.w3schools.com/bootstrap/bootstrap_buttons.asp">Formularios Botones</a></p>
-        <p><a href="https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation">Validación de Formularios</a></p>
+        <p><a href="https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation">Formularios Validaciones</a></p>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php">Formularios Validaciones
+                Boostrap</a></p>
+        <p><a href="https://developer.mozilla.org/es/docs/Glossary/Function">Funciones</a></p>
     </div>
     <br>
+    <div id="contenidoEjemplosFormularios" class="container mt-5">
+        <h2>EJEMPLOS FORMULARIOS</h2>
+        <p>Podeis elegir type EL TIPO, id y PLACEHOLDER: texto de informacion que aparece dentro del recuadro del input</p>
+        <h3>EJEMPLO 1: Input Tipo Texto</h3>
+        <input type="text" id="e1texto" placeholder="Introduce tu texto">
+        <h3>EJEMPLO 2: Input Tipo Password</h3>
+        <input type="password" id="e2password" placeholder="Introduce tu password">
+        <h3>EJEMPLO 3: Input Tipo Radio</h3>
+        <p>Permite elegir solo uno de los tres. Deben tener el mismo name y diferente id</p>
+        <input type="radio" id="colorRojo" name="color"> Rojo
+        <input type="radio" id="colorVerde" name="color"> Verde
+        <input type="radio" id="Amarillo" name="color"> Amarillo
+        <h3>EJEMPLO 4: Input Tipo Checkbox</h3>
+        <p>Permite elegir los que quieras. No necesitan name</p>
+        <input type="checkbox" id="acepto"> Acepto las condiciones
+        <input type="checkbox" id="aceptoCookies"> Acepto las cookies
+        <h3>EJEMPLO 5: Input Tipo Fecha y tipo fecha y hora</h3>
+        <input type="date" id="e5fecha">
+        <input type="datetime-local" id="e5fechayhora">
+        <h3>EJEMPLO 6: Input Tipo Email</h3>
+        <input type="email" id="e5email" placeholder="Introduce un email">
+        <h3>EJEMPLO 7: Input Tipo Numero</h3>
+        <input type="number" id="e7numero" placeholder="Agrega un numero">
+        <h3>EJEMPLO 8: Select</h3>
+        <p>Select sirve para seleccionar un valor entre varias opciones. Tiene id, que va en el select, class
+            form-select, para que tenga un estilo bonito con boostrap y options con value que es el valor de cada
+            elemento que se selecciona</p>
+        <select id="e8Color" class="form-select">
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+            <option value=""></option>
+        </select>
+        <h3>EJEMPLO 8: Botones</h3>
+        <p>Botones, puedes elegir una class segun el color que quieras para el boton</p>
+        <button type="button" class="btn btn-default">Texto del Boton</button>
+        <button type="button" class="btn btn-primary">Ejemplo texto</button>
+        <button type="button" class="btn btn-success">Boton 2</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <h3>EJEMPLO 9: Validaciones de input texto y estilos</h3>
+        <p>Crear un div con la clase was-validated y poner dentro del div los elementos del formulario a validar</p>
+        <p>Por cada elemento a validar, hacer un div con la clase mb-3 y dentro poner el elemento a validar, y un texto
+            con la class valid-feedback y el texto de feedback valido, y otro texto con la class invalid-feedback y el
+            texto de feedback invalido</p>
+        <div id="ejemplo9formulario" class="was-validated">
 
-    <div id="contenido" class="container mt-5">
+            <div class="mb-3">
+                <input type="text" id="e9texto" placeholder="Introduce tu texto" required minlength="5" maxlength="10"
+                    class="form-control">
+                <p class="valid-feedback">El texto introducido es correcto</p>
+                <p class="invalid-feedback">El campo texto es obligatorio y debe tener entre 5 y 10 caracteres</p>
+            </div>
 
-    <h1>EJEMPLOS</h1>
-    <h3>EJEMPLO 1 : Input tipo Text</h3>
-    <p>Permite elejir el tipo, id y el PLACEHOLDER: que es el texto de información que aparece dentro del recuadro de Input</p>
-    <input type="text" id="texto" placeholder="Introduce tu texto">
-    <h3>EJEMPLO 2 : Input tipo Password</h3>
-    <input type="password" id="contraseña" placeholder="Introduce tu contraseña">
-    <h3>EJEMPLO 3 : Input tipo Radio</h3>
-    <p>Permite elejir uno de los 3. Tiene que tener mismo name y diferente id</p>
-    <input type="radio" id="colorRojo" name="color">Rojo
-    <input type="radio" id="colorVerde" name="color">Verde
-    <input type="radio" id="colorAmarillo" name="color">Amarillo
-    <h3>EJEMPLO 4 : Input tipo Checkbox</h3>
-    <p>Permite elejir los que quieras. No necesita name</p>
-    <input type="checkbox" id="acepto">Acepto las condiciones
-    <input type="checkbox" id="aceptoCondiciones">Acepto las condiciones
-    <h3>EJEMPLO 5 : Input tipo Fecha y tipo Fecha y Hora</h3>
-    <input type="date" id="fecha">
-    <input type="datetime-local" id="fechayhora">
-    <h3>EJEMPLO 6 : Input tipo email</h3>
-    <input type="email" id="tipoemail" placeholder="Introduce tu email">
-    <h3>EJEMPLO 7 : Input tipo numero</h3>
-    <input type="number" id="tiponumero" placeholder="Introduce un número">
-    <h3>EJEMPLO 8 : Select</h3>
-    <select id ="color" class="form-select">
-        <option value="rojo">Rojo</option>
-        <option value="verde">Verde</option>
-        <option value="amarillo">Amarillo</option>
-        <option value=""></option>
-      </select>
-      <h3>EJEMPLO 9 : Botones</h3>
-      <p>Botones, puedes elegir una clase según el color que quieras para el botón</p>
-      <button type="button" class="btn">Basic</button>
-      <button type="button" class="btn btn-default">Default</button>
-      <button type="button" class="btn btn-primary">Primary</button>
-      <button type="button" class="btn btn-success">Success</button>
-      <button type="button" class="btn btn-info">Info</button>
-      <button type="button" class="btn btn-warning">Warning</button>
-      <button type="button" class="btn btn-danger">Danger</button>
-      <button type="button" class="btn btn-link">Link</button>
-      
-      <h3>EJEMPLO 9 : Validaciones de tipo input texto y estilos</h3>
-      <p>Primero hay que crear un div con la clase was-validated y poner dentro del div los elementos del formulario a validar </p>
-      <p>Por cada elemento a validar, hacer un div con la clase mb-3 y dentro poner el elemento a validar y texto con la class valid-feedback valido y otro texto con la clasee invalid-feedback y tel testo de invalido</p>
-      <div id="ejemplo9formularios" class="was-validated">
-      <div class="mb-3">
-      <input type="text" id="e10texto" placeholder="Introduce tu texto" required minlength="5" maxlength="10" class="form-control"> 
-      <p class="valid-feedback">El texto introducido es correcto</p>
-      <p class="invalid-feedback">El campo texto es obligatorio y debe tener entre 5 y 10 caracteres</p>
-      </div>
+            <div class="mb-3">
+                <input type="number" id="e9number" placeholder="Introduce tu numero" required min="0" max="10"
+                    class="form-control">
+                <p class="valid-feedback">El numero es correcto</p>
+                <p class="invalid-feedback">El campo numero es obligatorio required, y debe tener un valor min de 0 y un
+                    max de 10</p>
+            </div>
 
-      <div class="mb-3">
-      <input type="number" id="e10number" placeholder="Introduce tu numero" required min="0" max="10" class="form-control"> 
-      <p class="valid-feedback">El numero introducido es correcto</p>
-      <p class="invalid-feedback">El campo número es obligatorio y debe ser un numero entre 0 y 10</p>
-      </div>
-    
-      <div class="mb-3">
-      <input type="email" id="e10email" placeholder="Introduce tu email" required minlength="5" maxlength="20" class="form-control"> 
-      <p class="valid-feedback">El email introducido es correcto</p>
-      <p class="invalid-feedback">El campo email es obligatorio y debe tener entre 5 y 20 caracteres</p>
-      </div>
+            <div class="mb-3">
+                <input type="email" id="e9email" placeholder="Introduce tu email" required minlength="5" maxlength="10"
+                    class="form-control">
+                <p class="valid-feedback">El email introducido es correcto</p>
+                <p class="invalid-feedback">El campo email es obligatorio y debe tener entre 5 y 10 caracteres</p>
+            </div>
 
 
-       </div>
-      
-      <button type="button" class="btn btn-success">Guardar Texto</button>
-      </div>
+            <button type="button" class="btn btn-success">Guardar Texto</button>
+        </div>
 
     </div>
 
-    <div class="container mt-5">
-    <h1>EJERCICIOS</h1>
-   
+    <div id="contenidoFunciones" class="container mt-5">
+        <h1>EJEMPLOS FUNCIONES</h1>
+        <h3>Ejemplo 1: Llamar a una funcion</h3>
+        <p id="funcionesEjemplo1"></p>
+        <h3>Ejemplo 2: Llamar a una funcion desde un botón</h3>
+        <button type="button" class="btn btn-success" onclick="saludar()">Saludar</button>
+        <p id="funcionesEjemplo2"></p>
+        <h3>Ejemplo 3: Obtener información de un formulario y usarlo en una función</h3>
+        <input type="number" id="e3numero1" placeholder="Agrega un numero">
+        <input type="number" id="e3numero2" placeholder="Agrega un numero a restar">
+        <button type="button" class="btn btn-success" onclick="restar()">Restar</button>
+        <p id="funcionesEjemplo3"></p>
+        <h3>Ejemplo 4: Obtener información de un select y usarlo en una función</h3>
+        <p>Elige una Ciudad</p>
+        <select id="e4ciudades" class="form-select">
+            <option value="Malaga">Malaga</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+        </select>
+        <button type="button" class="btn btn-success" onclick="mostrarUbicacion()">Mostar Ubicación</button>
+        <p id="e4Solucion"></p>
+
     </div>
-    
-    <script src="js/e4-dom-y-cadenas.js"></script>
-    <script src="js/e4-ejercicios-dom-y-cadenas.js"></script>
+
+    <div id="contenidoEjercicios" class="container mt-5">
+
+        <h2>EJERCICIOS</h2>
+        
+
+
+
+
+    </div>
+
+    <script src="js/e5-formularios-funciones-y-eventos.js"></script>
+    <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
 </body>
 
 </html>
