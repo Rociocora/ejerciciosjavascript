@@ -126,6 +126,34 @@
     <div id="contenidoEjercicios" class="container mt-5">
 
         <h2>EJERCICIOS</h2>
+        <h3>EJERCICIO 1</h3>
+        <div id="ejemplo9formulario" class="was-validated">
+
+            <div class="mb-3">
+                <input type="text" id="ejemplotexto1" placeholder="Introduce tu Nombre" required minlength="3" maxlength="30"
+                    class="form-control">
+                <p class="valid-feedback">El nombre es correcto</p>
+                <p class="invalid-feedback">El campo Nombre es obligatorio y debe tener entre 3 y 30 caracteres</p>
+            </div>
+
+            <div class="mb-3">
+                <input type="text" id="ejempltexto2" placeholder="Introduce Ciudad" required min="3" max="30"
+                class="form-control">
+                <p class="valid-feedback">La ciudad es correcta</p>
+                <p class="invalid-feedback">El campo Ciudad es obligatorio y debe tener entre 3 y 30 caracteres</p>
+            </div>
+
+            <div class="mb-3">
+                <input type="date" id="ejemplo1fecha" placeholder="Introduce Fecha de Nacimiento" min="1900-01-01" max="2024-12-31"
+                class="form-control">
+                <p class="valid-feedback">La fecha es correcta</p>
+                <p class="invalid-feedback">El campo Fecha es obligatorio y el año debe estar entre 1900 y 2024</p>
+                <button type="button" class="btn btn-success" onclick="mostrarBienvenida()">Enter</button>
+                <p id="ejemplo1Solucion"></p>
+            </div>
+      
+            </div>
+        
         
 
 
