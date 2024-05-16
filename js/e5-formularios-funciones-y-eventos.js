@@ -58,6 +58,7 @@ function restar(){
     let num2 = document.getElementById("e3numero2").value;
     let resta = num1 - num2;
     let mensaje = "La resta de los numeros " + num1 + " y " + num2 + " es igual a " + resta;
+    //Usamos la función de imprimir que hemos declarado antes
     imprimir(mensaje, "funcionesEjemplo3");
 }
 
