@@ -57,8 +57,13 @@ function restar(){
     let num1 = document.getElementById("e3numero1").value;
     let num2 = document.getElementById("e3numero2").value;
     let resta = num1 - num2;
-    let mensaje = "La resta de los numeros " + num1 + " y " + num2 + " es igual a " + resta;
-    //Usamos la función de imprimir que hemos declarado antes
+    let suma = num1 + num2;
+    let multiplicacion = num1 * num2;
+    let division = num1 / num2;
+    let mensaje = "La resta de los numeros " + num1 + " y " + num2 + " es igual a " + resta + "La suma de los numeros " + num1 + " y " + num2 + " es igual a " + suma;
+                  "La multiplicacion de los numeros " + num1 + " y " + num2 + " es igual a " + multiplicacion +
+                  "La división de los numeros " + num1 + " y " + num2 + " es igual a " + division;
+    //Usamos la función de imprimir que hemos declarado ante
     imprimir(mensaje, "funcionesEjemplo3");
 }
 
