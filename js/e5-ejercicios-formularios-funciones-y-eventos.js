@@ -87,3 +87,16 @@ function calcularEdad(){
     let mensaje = "Mi edad en días es: " + edadEnDías + "\nEn minutos es: " + edadEnMinutos + " \nEn segundos: " + edadEnSegundos;
 imprimir(mensaje,"ejercicio6");
 }
+
+/*EJERCICIO 7
+Crea un formulario para mostrar información sobre un texto.
+Crea un elemento textArea que reciba un texto de longitud entre 10 y 100 caracteres. 
+Debe ser obligatorio. Agrega validación Boostrap.
+Agrega un boton que al hacer click llame a una función que muestre un mensaje con el texto completo en mayusculas, 
+la primera letra del texto, la última letra y su longitud.*/
+function introduceTexto(){
+    let introducirTexto = document.getElementById("ejercicio7Texto").value;
+    let totalCaracteresTexto = introducirTexto.length;
+    let mensaje = "Su longitud total es: " + totalCaracteresTexto;
+imprimir(mensaje,"ejercicio7");
+}
