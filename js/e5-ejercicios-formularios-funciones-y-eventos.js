@@ -97,6 +97,9 @@ la primera letra del texto, la última letra y su longitud.*/
 function introduceTexto(){
     let introducirTexto = document.getElementById("ejercicio7Texto").value;
     let totalCaracteresTexto = introducirTexto.length;
-    let mensaje = "Su longitud total es: " + totalCaracteresTexto;
+    let primeraLetraTexto = introducirTexto[0];
+    let ultimaLetraTexto = introducirTexto[introducirTexto.length - 1]
+    let cadenaMayusculaTexto = introducirTexto.toUpperCase();
+    let mensaje = "Su longitud total es: " + totalCaracteresTexto + "\nLa primera letra es: " + primeraLetraTexto + "\nLa ultima letra es: " + ultimaLetraTexto + "\nEl texto en mayúscula: " + cadenaMayusculaTexto;
 imprimir(mensaje,"ejercicio7");
 }
