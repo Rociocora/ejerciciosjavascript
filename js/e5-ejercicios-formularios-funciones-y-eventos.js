@@ -103,3 +103,17 @@ function introduceTexto(){
     let mensaje = "Su longitud total es: " + totalCaracteresTexto + "\nLa primera letra es: " + primeraLetraTexto + "\nLa ultima letra es: " + ultimaLetraTexto + "\nEl texto en mayúscula: " + cadenaMayusculaTexto;
 imprimir(mensaje,"ejercicio7");
 }
+
+/*EJERCICIO 8
+Crea un formulario para calcular la nota media.
+Agrega 3 elementos que reciban numeros entre 0 y 10 y que no pueden estar vacío. Agrega validación Boostrap.
+Agrega un boton que al hacer click llame a una función que muestre un mensaje con la media de los tres números.*/
+function introduceNota(){
+    let notaMates = parseFloat(document.getElementById("notaExamen1").value);
+    let notaIngles = parseFloat(document.getElementById("notaExamen2").value);
+    let notaHistoria = parseFloat(document.getElementById("notaExamen3").value);
+    let totalNotas = 3;
+    let notaMedia = (notaMates + notaIngles + notaHistoria)/totalNotas;
+    let mensaje = "La nota media de los 3 examenes es de: " + notaMedia;
+imprimir(mensaje,"ejercicio8");
+}
