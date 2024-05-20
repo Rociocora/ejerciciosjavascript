@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript desde 0 con Ejercicios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="p-5 bg-dark text-white text-center">
+        <h1>Bootcamp QA: Condicionales</h1>
+        <p><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals"></a></p>
+    </div>
+
+    <div id="ejemplosCondicionales" class="container mt-5">
+        <h3>Ejemplo 1: Condicionales if else. Comprobar si un valor es igual a otro</h3>
+        <form id="ejemplo1Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e1numero" placeholder="Introduce un numero" required
+                    class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El campo numero es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="numeroEsCinco()">Enviar</button>
+        </form>
+        <p id="ej1resultado"></p>
+
+        <h3>Ejemplo 2: Condicionales if else. Comprobar si un numero es mayor o igual a otro</h3>
+        <form id="ejemplo2Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e2numero" placeholder="Introduce un numero" required
+                    class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El campo numero es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="numeroMayorCinco()">Enviar</button>
+        </form>
+        <p id="ej2resultado"></p>
+
+        <h3>Ejemplo 3: Condicionales if else. Comparar textos</h3>
+        <form id="ejemplo3Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="e3Texto" placeholder="Introduce una ciudad" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="ciudadEsMalaga()">Enviar</button>
+        </form>
+        <p id="ej3resultado"></p>
+
+        <h3>Ejemplo 4: Condicionales if else. Validar Formulario</h3>
+        <form id="ejemplo4Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="e4Animal" placeholder="Introduce un animal" required minlength="4" maxlength="10"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio y debe tener entre 4 y 10 caracteres </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarAnimal()">Enviar</button>
+        </form>
+        <p id="ej4resultado"></p>
+    </div>
+
+
+    <script src="js/e6-condicionales.js"></script>
+    <script src="js/e6-ejercicios-condicionales.js"></script>
+</body>
+
+</html>
