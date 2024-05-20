@@ -65,3 +65,21 @@ function mostrarAnimal(){
     }
 imprimir(mensaje,"ej4resultado");
 }
+//EJEMPLO 5, MULTIPLES IF ELSE
+function mostrarPrecio(){
+    let producto = document.getElementById("e5productos").value;
+    let mensaje = "";
+    if (producto === "Camiseta"){
+        mensaje = "El precio de la camiseta es 10 euros";
+    }
+    else if(producto === "Pantalon"){
+        mensaje = "El precio del pantalon es 20 euros";
+    }
+    else if(producto === "Chaqueta"){
+        mensaje = "El precio de la chaqueta es 30 euros";
+    }
+    else {
+        mensaje = "El producto elegido no está registrado";
+    }
+imprimir(mensaje,"ej5resultado");
+}
