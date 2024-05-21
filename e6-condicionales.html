@@ -99,6 +99,84 @@
         <p id="ej6resultado"></p>
     </div>
 
+    <div id="ejerciciosCondicionales" class="container mt-5">
+        <h3>Ejercicio 1</h3>
+        <form id="ejercicio1Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ej1numero" placeholder="Introduce tu edad" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mayorEdad()">Enviar</button>
+        </form>
+        <p id="ejer1resultado"></p>
+
+        <h3>Ejercicio 2</h3>
+        <form id="ejercicio2Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ej2numero1" placeholder="Introduce un número" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio </p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ej2numero2" placeholder="Introduce un número" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="compararNumeros()">Enviar</button>
+        </form>
+        <p id="ejer2resultado"></p>
+        
+        <h3>Ejercicio 3</h3>
+        <form id="ejercicio3Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ej3nota" placeholder="Introduce tu nota" required min="0" max="10" step="0.001"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="notaExamen()">Ver Resultado</button>
+        </form>
+        <p id="ejer3resultado"></p>
+
+        <h3>Ejercicio 4</h3>
+        <form id="ejercicio4Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="ej4nombre" placeholder="Introduce tu nombre" required minlength="0" 
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="longitudNombre()">Ver Resultado</button>
+        </form>
+        <p id="ejer4resultado"></p>
+
+        <h3>Ejercicio 5</h3>
+        <form id="ejercicio5Condicionales" class="was-validated">
+            <div class="mb-3">
+                <select id="e5meses" class="form-select" required>
+                    <option value=""></option>
+                    <option value="enero">Enero</option>
+                    <option value="febrero">Febrero</option>
+                    <option value="marzo">Marzo</option>
+                    <option value="abril">Abril</option>
+                    <option value="mayo">Mayo</option>
+                    <option value="junio">Junio</option>
+                    <option value="julio">Julio</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="septiembre">Septiembre</option>
+                    <option value="octubre">Octubre</option>
+                    <option value="noviembre">Noviembre</option>
+                    <option value="diciembre">Diciembre</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mesEstacion()">Ver Estación</button>
+        </form>
+        <p id="ejer5resultado"></p>
+
 
     <script src="js/e6-condicionales.js"></script>
     <script src="js/e6-ejercicios-condicionales.js"></script>
