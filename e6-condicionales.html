@@ -77,6 +77,26 @@
             <button type="button" class="btn btn-success" onclick="mostrarPrecio()">Ver Precio</button>
         </form>
         <p id="ej5resultado"></p>
+        
+        <h3>Ejemplo 6: Condicionales if else anidados. Si elige destino paris, tiene un descuento de 100 euros si se va por mas de 10 días.</h3>
+        <form id="ejemplo5Condicionales" class="was-validated">
+            <div class="mb-3">
+                <select id="e6destinos" class="form-select" required>
+                    <option value="paris">París 10 euros</option>
+                    <option value="nuevaYork">Nueva York 20 euros</option>
+                    <option value="roma">Roma 30 euros</option>
+                    <option value="canarias">Canarias 40 euros</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e6numeroDeDias" placeholder="Elige número de días" required min="1" 
+                class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">Debes irte al menos 1 día</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarPrecioDelViaje()">Ver Precio</button>
+        </form>
+        <p id="ej6resultado"></p>
     </div>
 
 

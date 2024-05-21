@@ -83,3 +83,36 @@ function mostrarPrecio(){
     }
 imprimir(mensaje,"ej5resultado");
 }
+
+function mostrarPrecioDelViaje(){
+    let viaje = document.getElementById("e6destinos").value;
+    let numeroDias = parseInt(document.getElementById("e6numeroDeDias").value);
+    let precioViaje;
+    let precioTotal;
+    let mensaje = "";
+    let descuento = 0;
+    if(viaje === "paris"){
+        precioViaje= 10;
+        if(numeroDias>10){
+           descuento = 100;
+        }
+        else{
+            descuento = 0;
+        }
+    }
+    else if(viaje === "nuevaYork"){
+        precioViaje= 20;
+    }
+    else if(viaje === "roma"){
+        precioViaje= 30;
+    }
+    else if(viaje === "canarias"){
+        precioViaje= 40;
+    }
+    else {
+        precioViaje= 0;
+    }
+    precioTotal= (precioViaje * numeroDias) - descuento;
+    mensaje = "El precio del viaje a " + viaje + " es de " + precioTotal + " tiene un descuento de " + descuento;
+    imprimir(mensaje,"ej6resultado" )
+}
