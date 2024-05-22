@@ -97,11 +97,103 @@
             <button type="button" class="btn btn-success" onclick="mostrarPrecioDelViaje()">Ver Precio</button>
         </form>
         <p id="ej6resultado"></p>
+
+        <h3>Ejemplo 7: Condicionales Operado Logico AND &&</h3>
+        <p>Muestra si el usuario puede entrar gratis al museo o no. Para entrar gratis
+            debe ser menor de 16 y ser de Malaga</p>
+
+            <form id="ejemplo7Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <select id="e7ciudad" class="form-select" required>
+                        <option value="paris">París</option>
+                        <option value="malaga">Malaga</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="madrid">Madrid</option>
+                    </select>
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">La ciudad es obligatoria</p>
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="e7edad" placeholder="Introduce tu edad" required min="1" 
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Debe tener más de 1 año</p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="entradaMuseo()">Enviar</button>
+            </form>
+            <p id="ej7resultado"></p>
+        
+            
+        <h3>Ejemplo 8: Condicionales Operador Logico OR ||</h3>
+        <p>Muestra si el usuario puede entrar gratis al museo o no. Para entrar gratis
+            debe ser menor de 16 o ser de Malaga</p>
+
+            <form id="ejemplo8Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <select id="e8ciudad" class="form-select" required>
+                        <option value="paris">París</option>
+                        <option value="malaga">Malaga</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="madrid">Madrid</option>
+                    </select>
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">La ciudad es obligatoria</p>
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="e8edad" placeholder="Introduce tu edad" required min="1" 
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Debe tener más de 1 año</p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="entradaMuseoOR()">Enviar</button>
+            </form>
+            <p id="ej8resultado"></p>
+
+            <h3>Ejemplo 9: Condicionales Operador Logico NOT ! </h3>
+            <p>Muestra si el usuario puede entrar gratis al museo o no. 
+               Solo pueden entrar gratis quienes no sean de malaga con menos de 16</p>
+               <form id="ejemplo9Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <select id="e9ciudad" class="form-select" required>
+                        <option value="paris">París</option>
+                        <option value="malaga">Malaga</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="madrid">Madrid</option>
+                    </select>
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">La ciudad es obligatoria</p>
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="e9edad" placeholder="Introduce tu edad" required min="1" 
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Debe tener más de 1 año</p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="entradaMuseoNOT()">Enviar</button>
+            </form>
+            <p id="ej9resultado"></p> 
+            
+            <h3>Ejemplo 10: Condicionales Switch</h3>
+            <p>El usuario debe introducir su mes de nacimiento de 1 a 12 un mes y debe mostrar 
+               su horoscopo segun el mes elegido.</p>
+               <form id="ejemplo10Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <input type="number" id="e10mesNacimiento" placeholder="Introduce tu mes de nacimiento" required min="1" max="12"
+                            class="form-control">
+                        <p class="valid-feedback">correcto</p>
+                        <p class="invalid-feedback">Debes introducir un mes entre 1 y 12</p>
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="mostrarHoroscopoSwitch()">mostrar Horoscopo</button>
+                </form>
+                <p id="ej10resultado"></p>
+            
+        
     </div>
 
     <div id="ejerciciosCondicionales" class="container mt-5">
         <h3>Ejercicio 1</h3>
-        <form id="ejercicio1Condicionales" class="was-validated">
+        <form class="was-validated">
             <div class="mb-3">
                 <input type="number" id="ej1numero" placeholder="Introduce tu edad" required
                     class="form-control">
@@ -113,7 +205,7 @@
         <p id="ejer1resultado"></p>
 
         <h3>Ejercicio 2</h3>
-        <form id="ejercicio2Condicionales" class="was-validated">
+        <form class="was-validated">
             <div class="mb-3">
                 <input type="number" id="ej2numero1" placeholder="Introduce un número" required
                     class="form-control">
@@ -131,7 +223,7 @@
         <p id="ejer2resultado"></p>
         
         <h3>Ejercicio 3</h3>
-        <form id="ejercicio3Condicionales" class="was-validated">
+        <form class="was-validated">
             <div class="mb-3">
                 <input type="number" id="ej3nota" placeholder="Introduce tu nota" required min="0" max="10" step="0.001"
                     class="form-control">
@@ -143,7 +235,7 @@
         <p id="ejer3resultado"></p>
 
         <h3>Ejercicio 4</h3>
-        <form id="ejercicio4Condicionales" class="was-validated">
+        <form class="was-validated">
             <div class="mb-3">
                 <input type="text" id="ej4nombre" placeholder="Introduce tu nombre" required minlength="0" 
                     class="form-control">
@@ -155,7 +247,7 @@
         <p id="ejer4resultado"></p>
 
         <h3>Ejercicio 5</h3>
-        <form id="ejercicio5Condicionales" class="was-validated">
+        <form class="was-validated">
             <div class="mb-3">
                 <select id="e5meses" class="form-select" required>
                     <option value=""></option>
