@@ -289,8 +289,59 @@
             <button type="button" class="btn btn-success" onclick="dividirNumeros()">Dividir</button>
         </form>
         <p id="ejer6resultado"></p>
-
-
+        <h3>Ejercicio 6: Otra forma de hacerlo</h3>
+        <form id="e6CondicionalesCalculadora" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e6calculadora" placeholder="Introduce un numero" required steps="0,00001"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e6calculadora2" placeholder="Introduce un numero" required steps="0,00001"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <div class="mb-3">
+                <select id="e6operacion" class="form-select" required>
+                    <option value="" disabled selected>Selecciona una operación</option>
+                    <option value="sumar">Suma</option>
+                    <option value="restar">Resta</option>
+                    <option value="multiplicar">Multiplicación</option>
+                    <option value="dividir">División</option>
+                </select>
+                <p class="valid-feedback">Operación seleccionada</p>
+                <p class="invalid-feedback">El campo operación es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="calculadoraNumeros()">Enviar</button>
+            <button type="button" class="btn btn-success" onclick="calculadoraNumerosSwitch()">Enviar</button>
+            <p id="e6calculadoraresultado"></p>
+           
+            <h3>Ejercicio 7</h3>
+            <form class="was-validated">
+                <div class="mb-3">
+                    <select id="producto" class="form-select" required>
+                        <option value="" disabled selected>Seleccione un producto</option>
+                        <option value="camisetas">Camiseta</option>
+                        <option value="sudaderas">Sudadera</option>
+                        <option value="bufandas">Bufanda</option>
+                    </select>
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">El campo es obligatorio</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="cantidad" class="form-label">Seleccione cantidad: </label>
+                    <input type="number" id="cantidad" class="form-control" required min="1"/>
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">El campo es obligatorio</div>
+                </div>
+                <button type="button" class="btn btn-success" onclick=" calcularPrecioFinal()">Calcular Precio Final</button>
+                <p id="ex8Resultado"></p>
+            </form>
+           
+           
     <script src="js/e6-condicionales.js"></script>
     <script src="js/e6-ejercicios-condicionales.js"></script>
 </body>

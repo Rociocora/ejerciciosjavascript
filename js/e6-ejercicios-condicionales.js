@@ -180,6 +180,73 @@ function dividirNumeros(){
     let mensaje = "La división de los dos numero es " + division;
 imprimir(mensaje, "ejer6resultado")
 }
+
+/*Otra forma hacer el ejercicio 6 con If else */
+function calculadoraNumeros() {
+    let numero1 = parseFloat(document.getElementById("e6calculadora").value);
+    let numero2 = parseFloat(document.getElementById("e6calculadora2").value);
+    let operacion = document.getElementById("e6operacion").value;
+    let resultado = 0;
+    let mensaje = "";
+
+    if (operacion === "sumar") {
+        resultado = numero1 + numero2;
+        mensaje = "La suma de " + numero1 + " más " + numero2 + " es igual a = " + resultado;
+    }
+    else if (operacion === "restar") {
+        resultado = numero1 - numero2;
+        mensaje = "La resta de " + numero1 + " menos " + numero2 + " es igual a = " + resultado;
+    }
+    else if (operacion === "multiplicar") {
+        resultado = numero1 * numero2;
+        mensaje = "La multiplicación de " + numero1 + " por " + numero2 + " es igual a = " + resultado;
+    }
+    else if (operacion === "dividir") {
+        if (numero2 !== 0) {
+            resultado = numero1 / numero2;
+            mensaje = "La división de " + numero1 + " entre " + numero2 + " es igual a = " + resultado;
+        }
+        else {
+            mensaje = "No se puede dividir entre 0";
+        }
+    }
+
+    imprimir(mensaje, "e6calculadoraresultado");
+}
+
+/*VERSION EJERCICIO 6 CON SWITCH
+function calculadoraNumerosSwitch() {
+    let numero1 = parseFloat(document.getElementById("e6calculadora").value);
+    let numero2 = parseFloat(document.getElementById("e6calculadora2").value);
+    let operacion = document.getElementById("e6operacion").value;
+    let resultado = 0;
+    let mensaje = "";
+
+    switch (operacion) {
+        case "sumar":
+            resultado = numero1 + numero2;
+            mensaje = mensaje = "La suma de " + numero1 + " más " + numero2 + " es igual a: " + resultado;
+            break;
+        case "restar":
+            resultado = numero1 - numero2;
+            mensaje = "La resta de " + numero1 + " menos " + numero2 + " es igual a: " + resultado;
+        case "multiplicar":
+            resultado = numero1 * numero2;
+            mensaje = "La multiplicación de " + numero1 + " por " + numero2 + " es igual a: " + resultado;
+        case "dividir":
+            if (numero2 !== 0) {
+                resultado = numero1 / numero2;
+                mensaje = "La división de " + numero1 + " entre " + numero2 + " es igual a: " + resultado;
+            }
+            else {
+                mensaje = "No se puede dividir entre 0";
+            }
+            break;
+    }
+    imprimir(mensaje,"e6calculadoraresultado");
+
+}*/
+
 /*EJERCICIO 7
 Crea un formulario que muestre el precio final segun el producto y la forma de pago elegida.
 Agrega un formulario donde el usuario pueda elegir entre los siguientes productos: 
@@ -188,3 +255,26 @@ y solo puede elegir un producto. Incluye también un elemento donde pueda introd
 que es tambien obligatorio y debe ser mayor a 0.
 Agrega un boton comprar que al hacer click muestre el precio total del producto elegido teniendo
 en cuenta la cantidad. Por ejemplo si elige 2 camisetas, el precio final seria 20 euros.*/
+function calcularPrecioFinal(){
+    let producto = document.getElementById("producto").value;
+    let cantidad = parseInt(document.getElementById("cantidad").value);
+    let precio = 0;
+    let mensaje = "";
+    let precioProducto = 0;
+
+    if(producto === "camisetas"){
+      precioProducto = 10;
+    }
+    else if (producto === "sudaderas"){
+       precioProducto = 20;
+    }
+    else if (producto === "bufandas"){
+       precioProducto = 30;
+    }
+    else {
+        mensaje = "Algo fue mal y no se pudo procesar su compra";
+    }
+    precio = precioProducto * cantidad;
+    mensaje = "El precio total de su compra es de = " + precio;
+    imprimir(mensaje, "ex8Resultado");
+}
