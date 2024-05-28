@@ -94,48 +94,97 @@ Agrega un boton que al hacer click llame a una funcion que muestre un mensaje co
 del año*/
 
 function mesEstacion(){
-    let mes = document.getElementById("e5meses").value;
+    let mesAño = document.getElementById("e5meses").value;
     let mensaje = "";
+    let estacion = "";
 
-    if(mes === "diciembre"){
-        mensaje = "Invierno";
-    }
-    else if(mes === "enero"){
-        mensaje = "Invierno";
-    }
-    else if(mes === "febrero"){
-        mensaje = "Invierno";
-    }
+    switch (mesAño) {
+        case "enero":
+            estacion = "INVIERNO";
+          break;
+        case "febrero":
+            estacion = "INVIERNO";
+          break;
+        case "marzo":
+            estacion = "PRIMAVERA";
+            break;
+        case "abril":
+            estacion = "PRIMAVERA";
+            break;
+        case "mayo":
+            mes = "PRIMAVERA";
+            break;
+        case "junio":
+           estacion = "VERANO";
+            break;
+        case "juLio":
+           estacion = "VERANO";
+            break;
+        case "agosto":
+            estacion = "VERANO";
+            break;
+        case "septiembre":
+            estacion = "OTOÑO"
+            break;
+        case "ocubre":
+            estacion = "OTOÑO"
+            break;
+        case "noviembre":
+            estacion = "OTOÑO"
+            break;
+        case "diciembre":
+            estacion = "INVIERNO"
+            break;
+        default:
+            estacion = "El campo no puede estar vacío";
+          
+      }
+      mensaje = estacion;
 
-    else if(mes === "marzo"){
-        mensaje = "Primavera";
-    }
-    else if(mes === "abril"){
-        mensaje = "Primavera";
-    }
-    else if(mes === "mayo"){
-        mensaje = "Primavera";
-    }
-    else if(mes === "junio"){
-        mensaje = "Verano";
-    }
-    else if(mes === "julio"){
-        mensaje = "Verano";
-    }
-    else if(mes === "agosto"){
-        mensaje = "Verano";
-    }
-    else if(mes === "septiembre"){
-        mensaje = "Otoño";
-    }
-    else if(mes === "octubre"){
-        mensaje = "Otoño";
-    }
-    else if(mes === "noviembre"){
-        mensaje = "Otoño";
-    }
-    else {
-        mensaje = "El campo no puede estar vacío";
-    }
-imprimir(mensaje,"ejer5resultado" );
+    imprimir(mensaje, "ejer5resultado");
+
 }
+
+/*EJERCICIO 6
+Crea una calculadora.
+Agrega un formulario donde el usuario pueda introducir dos numeros y seleccionar la operacion 
+suma, resta, multiplicacion o division. Los campos no pueden estar vacios.
+Agrega un boton que al hacer click llame a una funcion que muestre el resultado 
+de la operación seleccionada.*/
+
+function sumarNumeros(){
+    let numeroA = document.getElementById("ej6numero1").value;
+    let numeroB = document.getElementById("ej6numero2").value;
+    let suma = numeroA + numeroB;
+    let mensaje = "La suma de los dos numero es " + suma;
+imprimir(mensaje, "ejer6resultado")
+}
+function restarNumeros(){
+    let numeroA = document.getElementById("ej6numero1").value;
+    let numeroB = document.getElementById("ej6numero2").value;
+    let resta = numeroA - numeroB;
+    let mensaje = "La resta de los dos numero es " + resta;
+imprimir(mensaje, "ejer6resultado")
+}
+function multiplicarNumeros(){
+    let numeroA = document.getElementById("ej6numero1").value;
+    let numeroB = document.getElementById("ej6numero2").value;
+    let multiplicacion = numeroA * numeroB;
+    let mensaje = "La multiplicación de los dos numero es " + multiplicacion;
+imprimir(mensaje, "ejer6resultado")
+}
+function dividirNumeros(){
+    let numeroA = document.getElementById("ej6numero1").value;
+    let numeroB = document.getElementById("ej6numero2").value;
+    let division = numeroA / numeroB;
+    let mensaje = "La división de los dos numero es " + division;
+imprimir(mensaje, "ejer6resultado")
+}
+/*EJERCICIO 7
+Crea un formulario que muestre el precio final segun el producto y la forma de pago elegida.
+Agrega un formulario donde el usuario pueda elegir entre los siguientes productos: 
+1. Camiseta 10 euros, 2. Sudadera 20 euros, 3. Bufanda 5 euros, este campo es obligatorio 
+y solo puede elegir un producto. Incluye también un elemento donde pueda introducir la cantidad,
+que es tambien obligatorio y debe ser mayor a 0.
+Agrega un boton comprar que al hacer click muestre el precio total del producto elegido teniendo
+en cuenta la cantidad. Por ejemplo si elige 2 camisetas, el precio final seria 20 euros.*/
