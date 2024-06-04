@@ -19,13 +19,50 @@
     <br>
 
     <div id="ejemplobucles" class="container mt-5">
-        <h3>Repetir la misma frase 100 veces</h3>
-        <p id="solucion"
+        <h3>Ejemplo 1: Repetir la misma frase 100 veces</h3>
+            <p id="solucion"></p>  
+            <button type="button" class="btn btn-success" onclick="mostrarFrase()">Mostrar 100 veces la misma frase</button>
+            <p id="e1solucion"></p> 
+        
+        <h3>Ejemplo 2: Mostrar la tabla del multiplicar</h3>
+        <div class="mb-3">
+            <input type="number" id="e2tablamultiplicar"
+                placeholder="Introduce el numero del que quieres ver la tabla" required min="0"
+                class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">El campo es obligatorio y debetener un valor mayor a 0</p>
+        </div>
+        <button type="button" class="btn btn-success" onclick="mostrarTabla()">Mostrar tabla</button>
+        <p id="e2solucion"></p>
+   
+        <h3>Ejemplo 3: Mostrar los elementos de una lista en minusucula, pero si el elemento es María, mostrarlo en mayusucula</h3>
+        <button type="button" class="btn btn-success" onclick="mostrarListaMinuscula()">Mostrar la lista en minuscula y Maria Mayuscula</button>
+        <p id="e3solucion"></p>
 
+        <h3>Ejemplo 4:FOR LISTAS CON NUMEROS Mostrar el resultado de sumar todos los elementos de una lista. Si el elemento es menor a 5, no
+            se incluye en la suma.</h3>
+            <h4>Lista de Numeros</h4>
+            <p id="e4listaNumeros"></p>
+        <form id="ejemplo4" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e4numerolista" placeholder="Introduce el numero del que quieres ver la tabla"
+                    required class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+                <button type="button" class="btn btn-success" onclick="agregarNumero()">Agregar Numero</button>
+                <button type="button" class="btn btn-success" onclick="sumarMayoresA5()">Mostrar resultado suma de los
+                    mayores a 5</button>
+            </div>
+        </form>
+        <p id="e4sumatotal"></p>
+   
+   
+   
     </div>
 
 
     <script src="js/e8-bucles.js"></script>
+    <script src="js/e8-ejercicios-bucles.js"></script>
 
 </body>
 

@@ -79,7 +79,67 @@
     <p id="e8resultado"></p>
     </div>
 
+    <div id="ejerciciosArrays" class="container mt-5">
+        <p>EJERCICIO 1: Mostrar una lista de alumnos</p>
+        <button type="button" class="btn btn-success" onclick="mostrarListaAlumno()">Mostrar Lista de Alumnos</button>
+        <p id="listaAlumnos"></p>
+    
+        <h3>EJERICIO 2:Muestra el nombre del alumno en la posicion que elijas</h3>
+        <form id="ej2formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ej2posicion" placeholder="Introduce la posicion" min="0" 
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="posicionListaAlumno()">Posición del Alumno</button>
+        </form>
+        <div id="ej2resultado"></div>
+
+        <h3>EJERCICIO 3: Ordenar lista de alumnos por orden alfabetico</h3>
+        <button type="button" class="btn btn-success" onclick="ordenarListaAlumnos()">Ordenar lista de Alumnos</button>
+        <p id="e3listaAlumno"></p>
+
+        <h3>EJERCICIO 4: Agregar un nuevo alumno a la lista</h3>
+        <form id="ej4formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="texto" id="e4nuevoAlumno" placeholder="Introduce el nombre del nuevo alumno" required minlength="1" maxlength="30"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio y debe tener como máximo 30 caracteres</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="agregarAlumno()">Agregar Alumno</button>
+            <p id="e3alumnoNuevo"></p>
+        </form>
+
+        <h3>EJERCICIO 5: Eliminar un alumno de la lista</h3>
+       <form id="e6formulario" class="was-validated">
+        <div class="mb-3">
+            <input type="number" id="ej5eliminarAlumno" placeholder="Introduce el alumno que quieres eliminar" required min="1" max="500"
+                class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">El campo es obligatorio y debetener un valor mayor a 1</p>
+        </div>
+        <button type="button" class="btn btn-success" onclick="eliminarAlumno()">Eliminar alumno</button>
+        <p id="e5eliminarAlumno"></p>
+    </form>
+    <h3>EJERCICIO 6: Obtener la posicion de un alumno de la lista</h3>
+    <form id="ej8posicionAlumno" class="was-validated">
+      <div class="mb-3">
+        <input type="text" id="ej8alumno" placeholder="Introduce el nombre del alumno" required
+               class="form-control">
+        <p class="valid-feedback">Correcto</p>
+        <p class="invalid-feedback">El campo es obligatorio</p>
+      </div>
+        <button type="button" class="btn btn-success" onclick="verPosicionAlumno()">Ver la posicion del alumno</button>
+    </form>
+    <p id="ej8buscarAlumno"></p>
+    
+
+    </div>
+
     <script src="js/e7-arrays.js"></script>
+    <script src="js/e7-ejercicios-arrays.js"></script>
 </body>
 
 </html>
