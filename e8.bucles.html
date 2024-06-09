@@ -55,10 +55,60 @@
             </div>
         </form>
         <p id="e4sumatotal"></p>
-   
-   
-   
-    </div>
+   </div>
+
+   <div id="ejerciciosbucles" class="container mt-5">
+    <h3>Ejercicio 1: Suma de todos los numeros desde el 1 hasta el introducido por el usuario</h3>
+    <form class="was-validated">
+        <div class="mb-3">
+            <input type="number" id="e1sumanumeros" placeholder="Introduce el numero a sumar" required min="1"
+                pattern="^(?!0$).+" class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">El campo es obligatorio y debe tener un valor mayor a 0</p>
+        </div>
+        <button type="button" class="btn btn-success" onclick="mostrarSuma()">Mostrar tabla</button>
+    </form>
+    <p id="ex1solucion"></p>
+    <h3>Ejercicio 2: Mostrar una palabra el numero de veces indicado por el usuario</h3>
+    <form class="was-validated">
+        <div class="mb-3">
+            <input type="text" id="ex2repeticion" placeholder="Introduce una palabra" required pattern="[a-zA-Z\s]+"
+                class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">El campo es obligatorio</p>
+        </div>
+        <div class="mb-3">
+            <input type="number" id="ex2numerorepeticion" placeholder="Introduce un número" required min="1" class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">El campo es obligatorio y debe tener un valor mayor a 0</p>
+        </div>
+        <button type="button" class="btn btn-success" onclick="mostrarPalabra()">Mostrar Palabras</button>
+    </form>
+
+    <p id="e2resultado"></p>
+
+    <h3>Ejercicio 3: Mostrar la palabra MARGARITA o AMAPOLA el numero de veces introducido por el usuario segun si la palabra empieza por vocal o no</h3>
+    <form class="was-validated">
+        <div class="mb-3">
+            <input type="text" id="ex3palabra"
+            placeholder="Introduce una palabra" required pattern="[a-zA-Z\s]+"
+            class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">El campo es obligatorio</p>
+        </div>
+        <div class="mb-3">
+            <input type="number" id="ex3numerorepeticion"
+            placeholder="Introduce un número de veces que quieras repetir MARGARITA o AMAPOLA" required min="1"
+            class="form-control">
+            <p class="valid-feedback">Correcto</p>
+            <p class="invalid-feedback">El campo es obligatorio y debe tener un valor mayor a 0</p>
+        </div>
+        <button type="button" class="btn btn-success" onclick="eleccionPalabra()">Mostrar Palabras</button>
+
+    </form>
+    
+    <p id="e3resultado"></p>
+</div>
 
 
     <script src="js/e8-bucles.js"></script>

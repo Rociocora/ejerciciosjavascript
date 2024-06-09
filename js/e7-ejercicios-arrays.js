@@ -56,35 +56,35 @@ de la lista. */
 
 function eliminarAlumno(){
     let posicionAlumno = parseInt(document.getElementById("ej5eliminarAlumno").value);
-    listaAlumnos.splice(posicionAlumno-1,1);
-    mostrarListaAlumno();
+    let posicionLista = posicionAlumno - 1; //Como empieza en 0 le ponemos el -1.
     let mensaje = "";
 
-    if(posicionAlumno <1 || posicionAlumno >500){
-        mensaje = "La posición elegida no es válida. Debe ser un numero entre 1 y 500";
+    if(posicionAlumno <1 || posicionAlumno > listaAlumnos.lenght){
+        mensaje = "Error, la posición elegida es mayor a la longitud de la lista.";
     }
     else {
-        mensaje = "El alumno fue eliminado";
+        listaAlumnos.splice(posicionLista, 1)
+        mensaje = "Alumno eliminado, la lista actualizada es: " + listaAlumnos.join(", "); //El método join se usa para convertir todos los elementos de un array en una sola cadena de texto.
     }
 
+    mostrarListaAlumno();
     imprimir (mensaje, "e5eliminarAlumno")
 }
 
 /*EJERCICIO 6
 Agrega una opcion para buscar un alumno. Para ello:
 Agrega un campo para introducir el nombre del alumno a buscar.
-Agrega un boton buscar, que al pulsarlo muentre un mensaje con todos los alumnos que contengan el nombre introducido, 
-sin distinguir entre mayusculas y minusculas. */
+Agrega un boton buscar, que al pulsarlo muentre un mensaje con el primer alumno que contengan el nombre introducido. */
 
 function verPosicionAlumno() {
-    let buscarAlumno = document.getElementById("ej8alumno").value.toLowerCase();
-    let posicionDelAlumno = listaAlumnos.filter(alumno => alumno.toLowerCase().includes(buscarAlumno));
+    let buscarAlumno = document.getElementById("ej8alumno").value;
+    let posicionDelAlumno = listaAlumnos.indexOf(buscarAlumno);
     let mensaje = ""
-    if(posicionDelAlumno.lenght === -1){
-        mensaje = "El elemento no se encuentra en la lista";
+    if(posicionDelAlumno !== -1){
+        mensaje = "El elemento " + buscarAlumno + " esta en la lista con el nombre " + listaAlumnos[posicionDelAlumno] + " en la posición " + posicionDelAlumno;
     }
     else{
-        mensaje = "El elemento " + buscarAlumno + " esta en la posicion con indice " + posicionDelAlumno;
+        mensaje = "El elemento no se encuentra en la lista";
     }
     imprimir(mensaje,"ej8buscarAlumno");
 }

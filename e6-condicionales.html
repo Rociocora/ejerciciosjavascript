@@ -340,7 +340,91 @@
                 <button type="button" class="btn btn-success" onclick=" calcularPrecioFinal()">Calcular Precio Final</button>
                 <p id="ex8Resultado"></p>
             </form>
-           
+            <h3>Ejercicio 8: Precio Final Habitacion</h3>
+            <form id="ejer8hotel" class="was-validated">
+                <div class="mb-3">
+                    <select id="ejer8habitacion" class="form-control" required>
+                        <option value="" disabled selected>Selecciona tipo de habitación</option>
+                        <option value="suite">Suite - 100 €</option>
+                        <option value="doble">Habitación doble - 70 €</option>
+                        <option value="individual">Habitación individual - 50 €</option>
+                    </select>
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">Este campo es obligatorio.</div>
+    
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="ejer8cantidadNoches" class="form-control" required min="1"
+                        placeholder="¿Cuántas noches?">
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
+                </div>
+                <button type="button" class="btn btn-success" onclick="CuantasNoches()">Ver Precio</button>
+            </form>
+            <p id="ejer8resultadonoches"></p>
+    
+            <h3>Ejercicio 9: Precio Alquiler Coche</h3>
+            <form id="ej9Condicionales" class="was-validated">
+                <div class="mb-3">
+                    <label for="ej9Coche">Selecciona un coche:</label>
+                    <select id="ej9Coche" required class="form-control">
+                        <option value="">Selecciona un coche</option>
+                        <option value="deluxe">Coche Deluxe - 100 euros</option>
+                        <option value="standard">Coche Standard - 70 euros</option>
+                        <option value="basic">Coche Basic - 50 euros</option>
+                    </select>
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">Por favor, selecciona un coche.</div>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="ej9Seguro">Selecciona un seguro:</label>
+                    <select id="ej9Seguro" required class="form-control">
+                        <option value="">Selecciona un seguro</option>
+                        <option value="todo riesgo">Seguro todo riesgo - 20 euros</option>
+                        <option value="basico">Seguro basico - 5 euros</option>
+                    </select>
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">Por favor, selecciona un seguro.</div>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="ej9numero">Año de nacimiento:</label>
+                    <input type="number" id="ej9numero" placeholder="Introducir año de nacimiento" required
+                        class="form-control">
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">El campo año de nacimiento es obligatorio.</div>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="ej9numerodedias">NUmero de dias:</label>
+                    <input type="number" id="ej9numerodedias" placeholder="Introducir numero de dias" required min="1"
+                        class="form-control">
+                    <div class="valid-feedback">Correcto</div>
+                    <div class="invalid-feedback">Debes seleccionar al menos un dia.</div>
+                </div>
+    
+                <button type="button" class="btn btn-success" onclick="mostrarPrecioCoche()">Ver Precio</button>
+            </form>
+    
+            <p id="ejercicio9resultado"></p>
+    
+        <h3>Ejercicio 10: Adivinar un numero</h3>
+        <form id="ejer10" class="was-validated">
+            <div class="mb-3">
+                <label for="adivina">Adivina adivinanza</label>
+                <input type="number" id="ejer10numero" class="form-control" required min="1" max="10"
+                    placeholder="Escribe un número">
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Debes seleccionar un número del 1 al 10.</div>
+            </div>
+            <button type="button" class="btn btn-success" onclick="adivinar()">Adivinar</button>
+    
+        </form>
+        <p id="ejer10resultado"></p>
+    
+        </div>
+    
            
     <script src="js/e6-condicionales.js"></script>
     <script src="js/e6-ejercicios-condicionales.js"></script>
