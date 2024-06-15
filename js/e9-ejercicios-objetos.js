@@ -11,7 +11,7 @@ let viaje = {
     ciudadesAVisitar: [" Lombok", " Nusa Penida", " Gili", " Ubud"]
 }
 
-let viajes = [];
+let viajeros = [];
 
 function imprimir(mensaje,id) {
     let parrafo = document.getElementById(id);
@@ -19,7 +19,7 @@ function imprimir(mensaje,id) {
 }
 
 function mostrarViaje() {
-    let mensaje = "El viaje es a " + viaje.destino + " tiene un precio de  " + viaje.precio + " euros, con una duración de  " + viaje.diasDuracion + " días y vamos a visitar  " + viaje.ciudadesAVisitar + " y el viajero es " + viaje.viajero;
+    let mensaje = "El viaje es a " + viaje.destino + " tiene un precio de  " + viaje.precio + " euros, con una duración de  " + viaje.diasDuracion + " días y vamos a visitar  " + viaje.ciudadesAVisitar + " Descripción: " + viaje.descripcion + " y el viajero es " + viaje.viajero;
     imprimir(mensaje,"ej1objetos");
 
 }
@@ -36,29 +36,31 @@ function mostrarPropiedadViaje() {
     imprimir(mensaje,"ej2objetos");
 }
 
-function cambiarPropiedadViaje() {
-    let nuevoDestino = document.getElementById("ej3destinoViaje").value;
-    viaje.destino = nuevoDestino;
+function cambiarpropiedadViaje() {
+    let nuevoDestino = document.getElementById("propiedadViaje").value;
+    let nuevoValor = document.getElementById("nuevoValor").value;
+    if(nuevoDestino === "precio" || nuevoDestino ==="diasDuracion"){
+        viaje[nuevoDestino] = parseInt(nuevoValor);
+    }
+    else if (nuevoDestino === "ciudadesAVisitar") {
+        viaje[nuevoDestino] = nuevoValor.split(",");
+    }
+    else {
+        viaje[nuevoDestino] = nuevoValor;
+    }
     mostrarViaje();
-    let nuevoPrecio = document.getElementById("ej3precioViaje").value;
-    viaje.precio = nuevoPrecio;
-    mostrarViaje();
-    let nuevaDuracion = document.getElementById("ej3duracionViaje").value;
-    viaje.diasDuracion = nuevaDuracion;
-    mostrarViaje();
-    let nuevaCiudadVisitar = document.getElementById("ej3ciudadesVisitar").value;
-    viaje.ciudadesAVisitar = nuevaCiudadVisitar;
-    mostrarViaje();
-}
+
+ } 
 
 /*EJERCICIO 3
 Agrega un formulario en el que el usuario pueda introducir una descripcion del viaje. 
 Agrega un boton que al pulsarlo agrege la descripcion introducida al objeto viaje
 y muestre la informacion del viaje actualizada. */
 
-function agregarViajero() {
-    let nombreViajero = document.getElementById("ej4Viajero").value;
-    viaje["viajero"] = nombreViajero;
+function agregarDescripcion() {
+    let descripcionViaje = document.getElementById("descripcion").value;
+
+    viaje["descripcion"] = descripcionViaje;
     mostrarViaje();
 }
 
@@ -68,23 +70,83 @@ Para ello crea un formulario en el que introduzca el nombre del viajero, selecci
 y seleccione los descuentos: estudiante, jubilado o ninguno. Cuando el usuario pulse el boton agregar, 
 se mostrará la lista con toda la información de los viajeros agregados.*/
 
-function imprimirListaViajeros () {
-    let mensaje = "";
-    for(i=0; i<viajes.length; i++) {
-        mensaje+= " Mascota numero: " + i;
-        mensaje+= " Nombre: " +viajes[i].nombre;
-        mensaje+= " Edad: " + viajes[i].edad;
-        mensaje+= " Descuento: " + viajes[i].descuento;
-    }
-    imprimir(mensaje,"ej4agregarViajeroNuevo");
+function agregarViajero() {
+    let viajero = document.getElementById("e4nombreViajero").value;
+    let tipoViajero = document.getElementById("e4tipoViajero").value;
+    let descuento = document.getElementById("e4descuentoViajero").value;
+
+    let nuevoViajero = {
+        nombre: viajero,
+        tipo: tipoViajero,
+        descuento: descuento
+    };
+
+    viajeros.push(nuevoViajero);
+
+    imprimirViajeros();
+   
 }
-function agregarNuevaMascota() {
-    let viajeroNuevo = {};
-    viajeroNuevo.nombre =  document.getElementById("e4nombreViajero").value;
-    viajeroNuevo.edad =document.getElementById("adultoOniño").value;
-   viajeroNuevo.descuento = document.getElementById("ej4descuento").value;
 
-    viajes.push(viajeroNuevo);
-    imprimirListaViajeros();
+function imprimirViajeros() {
+    let mensaje = "";
+    for (i=0; i<viajeros.length;i++) {
+        let viajero = viajeros[i];
+        mensaje+= "\n Viajero numero: " + i;
+        mensaje+= "\n Nombre: " + viajero.nombre;
+        mensaje+= "\n Tipo: " + viajero.tipo;
+        mensaje+= "\n Descuento: " + viajero.descuento;
+        mensaje+= "\n Precio Viaje " + viajero.precioViaje;
+    }
+    imprimir(mensaje,"ejer4resultadoviajeros");
+}
 
+/*EJERCICIO 5
+Agrega al formulario un boton para mostrar el precio que debe pagar cada viajero por el viaje. 
+El precio del viaje para los niños es un 25% más barato. Para estudiante se aplica un descuento del 5%, 
+para jubilados un descuento del 10%. El precio a pagar del viaje se debe agregar como una propiedad mas de cada viajero.*/
+
+function mostrarPrecio() {
+    let precioViaje = viaje.precio;
+
+    for(i=0; i<viajeros.length; i++) {
+        let viajero = viajeros[i];
+        let precioFinal = 0;
+        if(viajero.tipo === "niño"){
+            precioFinal = precioViaje * 0.75; //(100-25)/100 = 0.75
+        }
+        else if(viajero.descuento === "estudiante") {
+            precioFinal = precioViaje * 0.95; //(100-5)/100 = 0.95
+        }
+        else if(viajero.descuento=== "jubilado") {
+            precioFinal = precioViaje * 0.90; //(100-10)/100 = 0.90
+        }
+        else {
+            precioFinal = precioViaje;
+        }
+        
+        viajero["precioViaje"] = precioFinal;
+
+    }
+
+    imprimirViajeros();
+
+}
+
+/*EJERCICIO 6
+Agrega un boton al formulario para mostrar el precio total del viaje. 
+Este precio será la suma del precio pagado por cada viajero. */
+
+
+function precioTotal() {
+    mostrarPrecio();
+    let precioTotal = 0;
+    
+    for(i=0; i<viajeros.length; i++) {
+        let viajero = viajeros[i];
+        precioTotal += viajero.precioViaje;
+    }
+
+    let mensaje = "El precio total del viaje es " + precioTotal;
+
+    imprimir(mensaje,"ej5preciototal");
 }
